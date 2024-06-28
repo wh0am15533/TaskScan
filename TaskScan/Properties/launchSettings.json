@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TaskScan": {
+      "commandName": "Project",
+      "commandLineArgs": "-search powershell"
+    }
+  }
+}

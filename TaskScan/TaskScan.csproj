@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>False</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>TaskScan.Program</StartupObject>
+    <ApplicationIcon>appIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DevNotes.cs" />
+    <Compile Remove="ProcessHelper.cs" />
+    <Compile Remove="ServiceHelper.cs" />
+    <Compile Remove="WMIQueries.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="DevNotes.cs" />
+    <None Include="ProcessHelper.cs" />
+    <None Include="ServiceHelper.cs" />
+    <None Include="WMIQueries.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TaskScheduler" Version="2.11.0" />
+  </ItemGroup>
+
+</Project>
